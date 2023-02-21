@@ -1,0 +1,50 @@
+.hero__section {
+    background-color: rgba(73, 187, 198, 0.621);
+    max-height: 500px;
+    align-items: center;
+}
+.hero__subtitle {
+    color: black;
+    font-weight: 600;
+}
+.hero__content p {
+    margin: 30px 0px;
+}
+.hero__content h2 {
+    font-weight: 900;
+}
+.hero__content button {
+    background-color: rgb(51, 49, 49);
+    border-radius: 10px;
+    padding: 5px;
+    color: aliceblue;
+}
+.hero__content button:hover {
+    scale: 1.1;
+    color: antiquewhite;
+}
+.timer__count {
+    background-color: rgb(66, 66, 212);
+    height: 300px;
+}
+.counter__content {
+    color : white;
+    max-height: 100%;
+    align-items: center;
+}
+.counter__content * {
+    margin: 10px 0px;
+}
+.timer__count img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+.clock__data {
+    position: relative;
+}
+.clock__data span {
+    position: absolute;
+    top: 10%;
+    left: 110%;
+}
