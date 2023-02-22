@@ -1,8 +1,13 @@
 import "./App.css";
 import Layout from "./components/Layout/Layout";
+import { CartProvider } from "./store/CartContext";
 
 function App() {
-  return <Layout/>;
+  return (
+    <CartProvider>
+      <Layout/>
+    </CartProvider>
+  )
 }
 
 export default App;

@@ -34,7 +34,6 @@ const Home = () => {
 
       const getCate = await request.get('/products/categories')
       const categories = getCate.data
-      console.log('cate', categories);
       const listPromise = categories.map(cate => request.get(`/products/category/${cate}`))
       Promise.all(listPromise)
         .then(arr => {

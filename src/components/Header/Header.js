@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
 import { Container, Row } from 'reactstrap'
 import {NavLink} from 'react-router-dom'
 
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
+import { CartContext } from '../../store/CartContext'
 
 const navLinks = [
     {
@@ -22,6 +23,9 @@ const navLinks = [
 ]
 
 const Header = () => {
+    const [cart, dispatch] = useContext(CartContext)
+
+    // console.log(cart);
     return (
         <header className='header'>
             <Container>
@@ -54,7 +58,7 @@ const Header = () => {
                             </span>
                             <span className="cart__icon">
                                 <i className="ri-shopping-cart-2-line"></i>
-                                <span className="badge">1</span>
+                                <span className="badge">{cart.totalQuantity}</span>
                             </span>
                             <span>
                                 <img src={userIcon} alt="userIcon" />

@@ -31,8 +31,8 @@ import productImg25 from "../images/wireless-03.png";
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
-    imgUrl: productImg01,
+    title: "Stone and Beam Westview ",
+    image: productImg01,
     category: "sofa",
     price: 193,
     shortDesc:
@@ -50,8 +50,8 @@ const products = [
 
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
+    title: "Rivet Bigelow Modern ",
+    image: productImg02,
     category: "sofa",
     price: 253,
     shortDesc:
@@ -73,8 +73,8 @@ const products = [
 
   {
     id: "03",
-    productName: "Amazon Brand Modern Sofa",
-    imgUrl: productImg03,
+    title: "Amazon Brand Modern Sofa",
+    image: productImg03,
     category: "sofa",
     price: 173,
     shortDesc:
@@ -95,8 +95,8 @@ const products = [
   },
   {
     id: "26",
-    productName: "Rivet Bigelow Modern ",
-    imgUrl: productImg02,
+    title: "Rivet Bigelow Modern ",
+    image: productImg02,
     category: "sofa",
     price: 253,
     shortDesc:
@@ -117,8 +117,8 @@ const products = [
   },
   {
     id: "04",
-    productName: "Fllufy Sheep Sofa",
-    imgUrl: productImg04,
+    title: "Fllufy Sheep Sofa",
+    image: productImg04,
     category: "sofa",
     price: 163,
     shortDesc:
@@ -140,8 +140,8 @@ const products = [
 
   {
     id: "05",
-    productName: "Faux Velvet Sofa",
-    imgUrl: productImg05,
+    title: "Faux Velvet Sofa",
+    image: productImg05,
     category: "sofa",
     price: 163,
     shortDesc:
@@ -163,8 +163,8 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
-    imgUrl: productImg06,
+    title: "Fllufy Sheep Sofa",
+    image: productImg06,
     category: "sofa",
     price: 163,
     shortDesc:
@@ -185,8 +185,8 @@ const products = [
   },
   {
     id: "07",
-    productName: "Sakarias Armchair",
-    imgUrl: productImg07,
+    title: "Sakarias Armchair",
+    image: productImg07,
     category: "chair",
     price: 99,
     shortDesc:
@@ -208,8 +208,8 @@ const products = [
 
   {
     id: "27",
-    productName: "Modern Arm Sofa",
-    imgUrl: productImg007,
+    title: "Modern Arm Sofa",
+    image: productImg007,
     category: "sofa",
     price: 173,
     shortDesc:
@@ -231,8 +231,8 @@ const products = [
 
   {
     id: "08",
-    productName: "Baltsar Chair",
-    imgUrl: productImg08,
+    title: "Baltsar Chair",
+    image: productImg08,
     category: "chair",
     price: 89,
     shortDesc:
@@ -254,8 +254,8 @@ const products = [
 
   {
     id: "09",
-    productName: "Helmar Chair",
-    imgUrl: productImg09,
+    title: "Helmar Chair",
+    image: productImg09,
     category: "chair",
     price: 112,
     shortDesc:
@@ -277,8 +277,8 @@ const products = [
 
   {
     id: "10",
-    productName: "Apple iPhone 12 Pro",
-    imgUrl: productImg13,
+    title: "Apple iPhone 12 Pro",
+    image: productImg13,
     category: "mobile",
     price: 799,
     shortDesc:
@@ -299,8 +299,8 @@ const products = [
   },
   {
     id: "25",
-    productName: "Sakarias Armchair",
-    imgUrl: productImg10,
+    title: "Sakarias Armchair",
+    image: productImg10,
     category: "chair",
     price: 99,
     shortDesc:
@@ -321,8 +321,8 @@ const products = [
   },
   {
     id: "11",
-    productName: "Apple iPhone 12 Max",
-    imgUrl: productImg14,
+    title: "Apple iPhone 12 Max",
+    image: productImg14,
     category: "mobile",
     price: 799,
     shortDesc:
@@ -344,8 +344,8 @@ const products = [
 
   {
     id: "12",
-    productName: "Realme 8",
-    imgUrl: productImg15,
+    title: "Realme 8",
+    image: productImg15,
     category: "mobile",
     price: 599,
     shortDesc:
@@ -367,8 +367,8 @@ const products = [
 
   {
     id: "13",
-    productName: "One Plus Nord",
-    imgUrl: productImg16,
+    title: "One Plus Nord",
+    image: productImg16,
     category: "mobile",
     price: 799,
     shortDesc:
@@ -390,8 +390,8 @@ const products = [
 
   {
     id: "14",
-    productName: "Apple iPhone 13 Pro",
-    imgUrl: productImg17,
+    title: "Apple iPhone 13 Pro",
+    image: productImg17,
     category: "mobile",
     price: 899,
     shortDesc:
@@ -413,8 +413,8 @@ const products = [
 
   {
     id: "15",
-    productName: "Samsung Galaxy S22",
-    imgUrl: productImg18,
+    title: "Samsung Galaxy S22",
+    image: productImg18,
     category: "mobile",
     price: 699,
     shortDesc:
@@ -436,8 +436,8 @@ const products = [
 
   {
     id: "16",
-    productName: "Rolex Watch",
-    imgUrl: productImg19,
+    title: "Rolex Watch",
+    image: productImg19,
     category: "watch",
     price: 299,
     shortDesc:
@@ -459,8 +459,8 @@ const products = [
 
   {
     id: "17",
-    productName: "Timex Easy Reader Watch",
-    imgUrl: productImg20,
+    title: "Timex Easy Reader Watch",
+    image: productImg20,
     category: "watch",
     price: 299,
     shortDesc:
@@ -482,8 +482,8 @@ const products = [
 
   {
     id: "18",
-    productName: "Rolex Watch",
-    imgUrl: productImg21,
+    title: "Rolex Watch",
+    image: productImg21,
     category: "watch",
     price: 299,
     shortDesc:
@@ -505,8 +505,8 @@ const products = [
 
   {
     id: "19",
-    productName: "Apple Watch",
-    imgUrl: productImg22,
+    title: "Apple Watch",
+    image: productImg22,
     category: "watch",
     price: 399,
     shortDesc:
@@ -528,8 +528,8 @@ const products = [
 
   {
     id: "20",
-    productName: "Beat Studio Wireless",
-    imgUrl: productImg23,
+    title: "Beat Studio Wireless",
+    image: productImg23,
     category: "wireless",
     price: 199,
     shortDesc:
@@ -551,8 +551,8 @@ const products = [
 
   {
     id: "22",
-    productName: "Beat EP Headphones",
-    imgUrl: productImg25,
+    title: "Beat EP Headphones",
+    image: productImg25,
     category: "wireless",
     price: 199,
     shortDesc:
