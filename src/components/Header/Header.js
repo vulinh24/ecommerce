@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './header.css'
 import { Container, Row } from 'reactstrap'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
@@ -56,9 +56,12 @@ const Header = () => {
                                 <i className="ri-heart-line"></i>
                                 <span className="badge">10</span>
                             </span>
+
                             <span className="cart__icon">
-                                <i className="ri-shopping-cart-2-line"></i>
-                                <span className="badge">{cart.totalQuantity}</span>
+                                <NavLink to={'/cart'}>
+                                    <i className="ri-shopping-cart-2-line"></i>
+                                    <span className="badge">{cart.totalQuantity}</span>
+                                </NavLink>
                             </span>
                             <span>
                                 <img src={userIcon} alt="userIcon" />

@@ -1,7 +1,7 @@
 const initCart = {
     prods: [],
-    totalAmount: 0,
-    totalQuantity: 0
+    totalAmount: Number(0),
+    totalQuantity: Number(0)
 }
 
 const cartReducer = (cart, action) => {
@@ -20,9 +20,16 @@ const cartReducer = (cart, action) => {
         cart.totalAmount = cart.totalAmount + Number(Number(newProd.quantity) * Number(newProd.price))
         cart.totalQuantity = cart.totalQuantity + Number(newProd.quantity) 
     } else {
-        isExistProd.quantity = isExistProd.quantity + Number(newProd.quantity);
-        cart.totalQuantity = cart.totalQuantity + Number(newProd.quantity);
-        cart.totalAmount = cart.totalAmount + (Number(newProd.quantity) * Number(isExistProd.price))
+        if (Number(newProd.quantity) + isExistProd.quantity === 0) {
+            cart.prods = cart.prods.filter(item => item !== isExistProd)
+            cart.totalQuantity = cart.totalQuantity + Number(newProd.quantity);
+            cart.totalAmount = cart.totalAmount + (Number(newProd.quantity) * Number(isExistProd.price))
+        }
+        else {
+            isExistProd.quantity = isExistProd.quantity + Number(newProd.quantity);
+            cart.totalQuantity = cart.totalQuantity + Number(newProd.quantity);
+            cart.totalAmount = cart.totalAmount + (Number(newProd.quantity) * Number(isExistProd.price))
+        }
     }
     return {...cart};
 }

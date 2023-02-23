@@ -8,7 +8,7 @@ const ListProduct = (props) => {
     <section className='list_product'>
       <Container>
         <Row>
-                <Col lg='12' style={{textAlign: 'center'}}>
+                <Col lg='12' style={{textAlign: 'center', marginBottom:'20px'}}>
             <h2>{props.title}</h2>
           </Col>
         </Row>

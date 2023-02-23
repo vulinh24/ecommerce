@@ -1,6 +1,8 @@
 import {Route, Routes, Navigate} from 'react-router-dom'
+import Cart from '../pages/Cart'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
+import ProductDetail from '../pages/ProductDetail'
 import Shop from '../pages/Shop'
 
 const Routers = () => {
@@ -10,6 +12,8 @@ const Routers = () => {
             <Route path='home' element={<Home />}></Route>
             <Route path='login' element={<Login />}></Route>
             <Route path='shop' element={<Shop />}></Route>
+            <Route path='cart' element={<Cart />}></Route>
+            <Route path='product/:id' element={<ProductDetail />}></Route>
         </Routes>
     )
 }
