@@ -12,7 +12,10 @@ const ProductCard = ({ product }) => {
     const addToCart = (e) => {
         e.stopPropagation();
         toast.success('Add to cart successfully!');
-        return {...product, quantity : 1};
+        return {
+            type: 'addCart',
+            payload: {...product, quantity : 1}
+        };
     }
 
     const gotoDetail = (id) => {

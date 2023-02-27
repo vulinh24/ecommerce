@@ -20,7 +20,10 @@ const ProductDetail = () => {
 
     const addToCart = () => {
         toast.success('Add to cart successfully!');
-        return {...product, quantity : 1};
+        return {
+            type: 'addCart',
+            payload: {...product, quantity : 1}
+        };
     }
 
     useEffect(() => {

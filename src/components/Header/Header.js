@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './header.css'
 import { Container, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
@@ -6,6 +6,8 @@ import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
 import { CartContext } from '../../store/CartContext'
+import { useSelector } from 'react-redux'
+import { getCurrentUser } from '../../redux/selectors'
 
 const navLinks = [
     {
@@ -25,7 +27,8 @@ const navLinks = [
 const Header = () => {
     const [cart, dispatch] = useContext(CartContext)
 
-    // console.log(cart);
+    const currentUser = useSelector(getCurrentUser);
+
     return (
         <header className='header'>
             <Container>
@@ -63,8 +66,25 @@ const Header = () => {
                                     <span className="badge">{cart.totalQuantity}</span>
                                 </NavLink>
                             </span>
-                            <span>
-                                <img src={userIcon} alt="userIcon" />
+                            <span style={{ position: 'relative' }}>
+                                {
+                                    currentUser.username === undefined ? (
+                                        <>
+                                            <img src={userIcon} alt="userIcon" />
+                                            {/* <ul>
+                                                <li></li>
+                                            </ul> */}
+                                        </>
+                                    ) : (
+                                        <>
+                                            <img src={currentUser.avatar} alt="userIcon" /><span style={{fontWeight: '600', marginLeft: '10px'}}>Welcome, {currentUser.username}</span>
+                                            {/* <ul>
+                                                <li></li>
+                                            </ul> */}
+                                        </>
+                                    )
+
+                                }
                             </span>
                         </div>
 

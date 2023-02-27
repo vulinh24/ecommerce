@@ -1,0 +1,42 @@
+.login__section{
+    justify-content: center;
+}
+.login__form {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+.login__section h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.login__form .form {
+    width: 80%;
+}
+.login__form input {
+    width: 100%;
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    padding-left: 3%;
+}
+.login__form input:nth-child(n+2) {
+    margin-top: 15px !important;
+}
+.form {
+    display: inline-block;
+}
+.login__form p {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.login__form button {
+    width: 50%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    margin: 50px auto;
+    text-align: center;
+}

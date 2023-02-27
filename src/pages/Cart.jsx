@@ -5,6 +5,7 @@ import imgShop from '../assets/images/shop.png'
 import '../style/cart.css'
 import { CartContext } from '../store/CartContext'
 import { toast } from 'react-toastify';
+import { NavLink } from 'react-router-dom'
 
 const Cart = () => {
 
@@ -12,7 +13,28 @@ const Cart = () => {
 
     const removeCart = (item) => {
         toast.success('Delete successfully')
-        dispatch(item)
+        const action = {
+            type: 'addCart',
+            payload: item
+        };
+        dispatch(action)
+    }
+
+    const changeQuantity = (item) => {
+        const action = {
+            type: 'addCart',
+            payload: item
+        };
+        dispatch(action)
+    }
+
+    const checkOut = () => {
+        if (cart.prods.length === 0) {
+            window.alert("Your cart is empty!")
+        } else {
+            window.alert("Checkout successfully!")
+            dispatch({ type: 'checkout' })
+        }
     }
 
     return (
@@ -50,10 +72,10 @@ const Cart = () => {
                                                     ${item.price.toFixed(2)}
                                                 </td>
                                                 <td>
-                                                    <span className='change_quantity' onClick={e => dispatch({ ...item, quantity: -1 })}><i class="ri-subtract-line">
+                                                    <span className='change_quantity' onClick={e => changeQuantity({ ...item, quantity: -1 })}><i className="ri-subtract-line">
                                                     </i></span>
-                                                    {item.quantity}
-                                                    <span className='change_quantity' onClick={e => dispatch({ ...item, quantity: 1 })}><i class="ri-add-line">
+                                                    <span class="prod__quantity">{item.quantity}</span>
+                                                    <span className='change_quantity' onClick={e => changeQuantity({ ...item, quantity: 1 })}><i className="ri-add-line">
                                                     </i></span>
                                                 </td>
                                                 <td onClick={e => removeCart({ ...item, quantity: -item.quantity })}><i className="ri-delete-bin-line delete__cart"></i></td>
@@ -67,11 +89,11 @@ const Cart = () => {
                         <Col lg='3'>
                             <div className="subtotal">
                                 <span>Subtotal</span>
-                                <span>${cart.totalAmount}</span>
+                                <span>${cart.totalAmount.toFixed(2)}</span>
                             </div>
                             <div className='cart__button'>
-                                <button>Continue Shopping</button>
-                                <button>Checkout</button>
+                                <NavLink to='/shop'>Continue Shopping</NavLink>
+                                <button onClick={e => checkOut()}>Checkout</button>
                             </div>
                         </Col>
                     </Row>

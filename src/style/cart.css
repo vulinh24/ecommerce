@@ -19,6 +19,7 @@
     font-weight: 300;
     margin-left: 60px;
 }
+.cart__button  a,
 .cart__button button {
     padding: 5px;
     background-color: var(--primary-color);
@@ -26,6 +27,16 @@
     border-radius: 5px;
     display: block;
     margin-top: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+.prod__quantity {
+    min-width: 20px;
+    display: inline-block;
+}
+.cart__button  a {
+    color: aliceblue !important;
 }
 .change_quantity {
     /* border-radius: 50%; */
